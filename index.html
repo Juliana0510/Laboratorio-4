@@ -253,5 +253,87 @@
                 </tbody>
             </table>
         </section>
+    <!-- ========== FORMULARIO DE CONTACTO CON VALIDACIONES ========== -->
+        <section id="contactame">
+            <h2>Contáctame</h2>
+            <form id="contactForm">
+                <fieldset>
+                    <div class="form-group">
+                        <label for="nombre">Nombre Completo *</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre completo">
+                        <div class="error-message" id="errorNombre"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="apellido">Apellido *</label>
+                        <input type="text" id="apellido" name="apellido" placeholder="Ingrese su apellido">
+                        <div class="error-message" id="errorApellido"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="empresa">Empresa *</label>
+                        <input type="text" id="empresa" name="empresa" placeholder="Nombre de la empresa">
+                        <div class="error-message" id="errorEmpresa"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefono">Teléfono *</label>
+                        <input type="text" id="telefono" name="telefono" placeholder="+57 3001234567">
+                        <div class="error-message" id="errorTelefono"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="correo">Correo Electrónico *</label>
+                        <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com">
+                        <div class="error-message" id="errorCorreo"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="motivo">Motivo de Contacto (mínimo 10 caracteres) *</label>
+                        <textarea id="motivo" name="motivo" placeholder="Describa el motivo de su contacto (mínimo 10 caracteres)"></textarea>
+                        <div class="char-counter" id="charCounter">0 / 10 caracteres mínimos</div>
+                        <div class="error-message" id="errorMotivo"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="horario">Horario preferido para contacto *</label>
+                        <input type="datetime-local" id="horario" name="horario">
+                        <div class="error-message" id="errorHorario"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ciudad">Ciudad de vacante *</label>
+                        <select id="ciudad" name="ciudad">
+                            <option value="">Seleccione una ciudad</option>
+                            <option value="Cali">Cali</option>
+                            <option value="Bogota">Bogotá</option>
+                            <option value="Medellin">Medellín</option>
+                            <option value="Manizales">Manizales</option>
+                            <option value="Barranquilla">Barranquilla</option>
+                            <option value="Otra">Otra</option>
+                        </select>
+                        <div class="error-message" id="errorCiudad"></div>
+                    </div>
+
+                    <div class="form-buttons">
+                        <input type="submit" value="📨 Enviar Mensaje">
+                        <input type="reset" value="🔄 Limpiar">
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+    </div>
+
+    <!-- MODAL DE ÉXITO -->
+    <div id="modalExito" class="modal">
+        <div class="modal-content">
+            <h3>✅ ¡Formulario Enviado!</h3>
+            <p>Gracias por contactarme. Tu mensaje ha sido enviado exitosamente y te responderé lo antes posible.</p>
+            <button class="modal-close" id="btnCerrarModal">Cerrar</button>
+        </div>
+    </div>
+
+    <!-- ENLACE AL ARCHIVO JAVASCRIPT -->
+    <script src="script.js"></script>
 </body>
 </html>
